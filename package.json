@@ -1,0 +1,69 @@
+{
+	"name": "hml-svelte",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build && npm run prepack",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"prepack": "svelte-kit sync && svelte-package && publint",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
+		"check-packages": "npm-check -u -E",
+		"refresh-packages": "rm -rf node_modules && rm -rf package-lock.json && npm i"
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"peerDependencies": {
+		"svelte": "5.19.9"
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "3.2.4",
+		"@eslint/compat": "1.2.6",
+		"@eslint/js": "9.20.0",
+		"@storybook/addon-essentials": "8.5.3",
+		"@storybook/addon-interactions": "8.5.3",
+		"@storybook/addon-svelte-csf": "5.0.0-next.23",
+		"@storybook/blocks": "8.5.3",
+		"@storybook/svelte": "8.5.3",
+		"@storybook/sveltekit": "8.5.3",
+		"@storybook/test": "8.5.3",
+		"@sveltejs/adapter-auto": "4.0.0",
+		"@sveltejs/kit": "2.17.1",
+		"@sveltejs/package": "2.3.10",
+		"@sveltejs/vite-plugin-svelte": "5.0.3",
+		"eslint": "9.20.0",
+		"eslint-config-prettier": "10.0.1",
+		"eslint-plugin-svelte": "2.46.1",
+		"globals": "15.14.0",
+		"prettier": "3.4.2",
+		"prettier-plugin-svelte": "3.3.3",
+		"publint": "0.3.4",
+		"storybook": "8.5.3",
+		"svelte": "5.19.9",
+		"svelte-check": "4.1.4",
+		"typescript": "5.7.3",
+		"typescript-eslint": "8.23.0",
+		"vite": "6.1.0",
+		"npm-check": "6.0.1"
+	}
+}
