@@ -7,4 +7,12 @@
     --primary-contrast-color: #F8F8F8;
     --secondary-contrast-color: #D3D3D3;
     --background-color: #EEEEEE;
+    --error-color: red;
+    --warning-color: orange;
+    --success-color: green;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
 }

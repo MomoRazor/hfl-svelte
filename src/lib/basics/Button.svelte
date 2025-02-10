@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Spinner from "./svgs/Spinner.svelte";
+	import Spinner from "../svgs/Spinner.svelte";
 
 
   interface Props {
@@ -56,7 +56,6 @@
 
 <style>
   .basic-button {
-    display: inline-block;
     cursor: pointer;
     border: 0;
     border-radius: 2em;

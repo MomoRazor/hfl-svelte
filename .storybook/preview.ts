@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/svelte'
-import '../src/stories/hfl-css.css'
+import '../src/lib/default-hfl.css'
 
 const preview: Preview = {
   parameters: {
