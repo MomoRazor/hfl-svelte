@@ -1,23 +1,25 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-    import '../lib/default-hfl.css'
+	import '../lib/default-hfl.css';
 
-    const {children}: {
-        children: Snippet
-    } = $props()
+	const {
+		children
+	}: {
+		children: Snippet;
+	} = $props();
 </script>
 
 <div class="app">
-    {@render children()}
+	{@render children()}
 </div>
 
 <style>
-    .app {
+	.app {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-        background-color: var(--background-color);
-        padding: 20px;
-        align-items: center;
+		background-color: var(--background-color);
+		padding: 20px;
+		align-items: center;
 	}
 </style>
