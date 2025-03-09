@@ -35,7 +35,9 @@
 			}
 		},
 		args: {
-			onClick: onNormalClick,
+			onClick: {
+				func: onNormalClick
+			},
 			onLoadClick: onLoadClick
 		}
 	});

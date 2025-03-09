@@ -12,7 +12,37 @@
 	--success-color: green;
 }
 
+html {
+	overflow: hidden;
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;
+}
+
+div {
+	display: flex;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.hidden-button {
+	background-color: transparent;
+	cursor: pointer;
+	border: 0;
+}
+
+* {
+	font-family: var(--general-font);
+	color: var(--text-color);
+	box-sizing: border-box;
 }
